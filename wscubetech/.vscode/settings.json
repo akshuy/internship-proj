@@ -1,5 +1,0 @@
-{
-    "python.terminal.activateEnvInCurrentTerminal": true,
-    "python.terminal.executeInFileDir": true,
-    "python.terminal.focusAfterLaunch": true
-}
