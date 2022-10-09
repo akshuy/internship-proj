@@ -50,6 +50,13 @@ def postComment(request):
         messages.success(request,"Your Reply has been posted successfully")
     return redirect(f"/blog/{post.slug}")
 def add(request): 
-    form = PostForm
-    context={'form':form}
-    return render(request,'blog/add.html',context)
+    if request.method == "POST":        
+        form = PostForm(request.POST)
+        if form.is_valid():
+            content = form.save(commit=False)
+            content.save()
+            return redirect('/')
+    else:
+        form = PostForm()
+    
+    return render(request,'blog/add.html',{'form':form})
