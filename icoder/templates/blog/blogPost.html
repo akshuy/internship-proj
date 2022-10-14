@@ -7,22 +7,22 @@
 {% load extras %}
 
 
-<div class="jumbotron container my-3 col-md-7">
-  <h2 class="jumbotron blog-post-title mb-1">{{post.title}}</h2>
-  <p class="jumbotron blog-post-meta ">{{post.timeStamp}} by <a class="text-success" href="/about">{{post.author}}</a>(<span> {{post.views}} viws</span>)</p>
+<div class="jumbotron container my-3 col-md-7"style="background-color:#b0acc9f7" >
+  <h2 class="jumbotron blog-post-title mb-1"style="background-color:#b0acc9f7" >{{post.title}}</h2>
+  <p class="jumbotron blog-post-meta "style="background-color:#b0acc9f7" >{{post.timeStamp}} by <a class="text-success" href="/about">{{post.author}}</a>(<span> {{post.views}} viws</span>)</p>
 
   <p>{{post.content|safe}}</p>
   <hr>
 </div>
 
-<div class="jumbotron container col-md-7">
+<div class="jumbotron container col-md-7"style="background-color:#b0acc9f7" >
 
   <h2>Comments ({{comments.count}})</h2>
   <div class="my-2">
     {% if user.is_authenticated %}
     <form action="/blog/postComment" method="post">
       {% csrf_token %}
-      <div class="jumbotron form-group">
+      <div class="jumbotron form-group"style="background-color:#b0acc9f7" >
           <label for="exampleInputEmail1">Post Comment </label>
           <input type="text" class="form-control" name="comment" placeholder="Enter comment here">
       </div>

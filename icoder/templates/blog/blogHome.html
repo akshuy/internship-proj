@@ -8,7 +8,7 @@
 <div class="container my-3 col-md-7">
     <h2>Coding Articles by iCoder</h2>
     {% for post in allPosts  %}
-    <div class="jumbotron row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative">
+    <div class="jumbotron row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative"style="background-color:#b0acc9f7" >
         <div class="col p-4 d-flex flex-column position-static">
             <strong class="d-inline-block mb-2 text-success">Article  by {{post.author}} ({{post.views}} views)</strong>
             <h3 class="mb-0"><a class="text-dark" href="/blog/{{post.slug}}">{{post.title}}</a></h3>
