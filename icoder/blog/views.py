@@ -55,8 +55,10 @@ def add(request):
         if form.is_valid():
             content = form.save(commit=False)
             content.save()
+            messages.success(request,"Your Blog has been added successfully Thankyou!")
             return redirect('/')
     else:
         form = PostForm()
+        messages.success(request,"Create your Block here Good Luck!")
     
     return render(request,'blog/add.html',{'form':form})
