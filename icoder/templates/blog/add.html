@@ -27,12 +27,16 @@
     }
     </style>
 <h1>Creatr Your Blog Here</h1>
+{% if user.is_authenticated %}
 <form action="" method="post">
   {% csrf_token %}
   {{form.media}}
   {{form.as_p}}
   <button type="submit" class="btn btn-success">Submit</button>
   </form>
+  {% else %}  
+  <p style="color:red"><b>Plese login to Create Post </b></p>
+  {% endif %}
 </div>
 </div>
 </body>
