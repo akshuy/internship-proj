@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.timezone import now
-from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 # Create your models here.
@@ -9,7 +9,7 @@ class Post(models.Model):
     sno = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255)
     # content = models.TextField()
-    content = RichTextField(blank=True,null=True)
+    content = RichTextUploadingField(default=" ")
     
     author = models.CharField(max_length=100)
     slug = models.CharField(max_length=50)

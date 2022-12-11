@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="container my-5 ">
-      <div class="jumbotron my-3 center"style="background-color:#b0acc9f7" >
+      <div class="jumbotron my-3 center"style="    background: linear-gradient(120deg,#e4a796 30%, #a8021b00 100%) " >
     <style>
       body {
         margin: 0;
@@ -32,6 +32,11 @@
   {% csrf_token %}
   {{form.media}}
   {{form.as_p}}
+  <p>
+    <label for="id_timeStamp">TimeStamp:</label>
+    <input type="text" name="timeStamp" value="2022-11-11" required="" id="id_timeStamp"readonly><input type="hidden" name="initial-timeStamp" value="2022-11-11" id="initial-id_timeStamp">
+    
+  </p>
   <button type="submit" class="btn btn-success">Submit</button>
   </form>
   {% else %}  
